@@ -1,0 +1,171 @@
+
+
+<ion-content padding forceOverscroll="true">
+  <ion-slides  pager="true" >
+    <ion-slide>
+
+
+      <div>
+      <p>If You are foreign member please swipe right</p>
+        <h1>Local Member </h1>
+
+        <form  #localMemebrForm = "ngForm" >
+          <ion-item class="slider">
+            <ion-label position="floating">National Identity Card Number</ion-label>
+
+            <ion-input type="text"  ngModel name="nic" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Full Name</ion-label>
+            <ion-input type="text"  ngModel name="fullname"></ion-input>
+          </ion-item>
+
+
+
+          <ion-item>
+            <ion-input type="date"  ngModel name="dob"></ion-input>
+          </ion-item>
+
+          <ion-item>
+
+            <ion-radio-group ngModel name="gender">
+              <ion-list-header>
+                <ion-label >Gender</ion-label>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio slot="start" value="Male" ></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Femlae</ion-label>
+                <ion-radio slot="start" value="Female"></ion-radio>
+              </ion-item>
+
+            </ion-radio-group>
+
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label position="floating" >Email</ion-label>
+            <ion-input  type="email" ngModel name="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Telephone </ion-label>
+            <ion-input type="text"  ngModel  name="telephone"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Address </ion-label>
+            <ion-input type="text"  ngModel  name="address"></ion-input>
+          </ion-item>
+          <ion-item>
+
+            <ion-label position="floating"  >User Name </ion-label>
+            <ion-input type="text" ngModel name="userName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label  position="floating" >Password </ion-label>
+            <ion-input  type="password" ngModel name="password" ></ion-input>
+          </ion-item>
+          <div padding>
+            <ion-button (click)="saveLocalMember(localMemebrForm)" expand="block">Register</ion-button>
+
+          </div>
+        </form>
+
+      </div>
+
+
+    </ion-slide>
+
+
+    <ion-slide >
+      <div>
+        <p>If You are local member please swipe left</p>
+        <h1>Foreign Member </h1>
+
+        <form  #foreignMemebrForm = "ngForm" >
+          <ion-item class="slider">
+            <ion-label position="floating">National Identity Card Number</ion-label>
+
+            <ion-input type="text"  ngModel name="nic" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Full Name</ion-label>
+            <ion-input type="text"  ngModel name="fullname"></ion-input>
+          </ion-item>
+
+
+
+          <ion-item>
+            <ion-input type="date"  ngModel name="dob"></ion-input>
+          </ion-item>
+
+          <ion-item>
+
+            <ion-radio-group ngModel name="gender">
+              <ion-list-header>
+                <ion-label >Gender</ion-label>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio slot="start" value="Male" ></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Femlae</ion-label>
+                <ion-radio slot="start" value="Female"></ion-radio>
+              </ion-item>
+
+            </ion-radio-group>
+
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label position="floating" >Email</ion-label>
+            <ion-input  type="email" ngModel name="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Telephone </ion-label>
+            <ion-input type="text"  ngModel  name="telphone"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Country </ion-label>
+            <ion-input type="text"  ngModel  name="country"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Address </ion-label>
+            <ion-input type="text"  ngModel  name="address"></ion-input>
+          </ion-item>
+          <ion-item>
+
+            <ion-label position="floating"  >User Name </ion-label>
+            <ion-input type="text" ngModel name="userName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label  position="floating" >Password </ion-label>
+            <ion-input  type="password" ngModel name="password" ></ion-input>
+          </ion-item>
+          <div padding>
+            <ion-button (click)="saveForeignMemebr(foreignMemebrForm)" expand="block">Register</ion-button>
+
+          </div>
+        </form>
+
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+

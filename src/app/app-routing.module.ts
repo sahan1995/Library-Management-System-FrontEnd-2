@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {HomePageModule} from "./home/home.module";
+import {SigninComponent} from "./signin/signin.component";
+import {SignupComponent} from "./signup/signup.component";
+import {HomepageComponent} from "./homepage/homepage.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  { path: 'index', component:SigninComponent},
+  { path: 'signUp', component:SignupComponent},
+  { path: 'home', component:HomepageComponent},
 ];
 
 @NgModule({
@@ -13,3 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents=[SigninComponent,SignupComponent,HomepageComponent]
