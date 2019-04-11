@@ -8,7 +8,7 @@ export class SigninService {
 
   constructor(private http:HttpClient) { }
 
-    private url= "http://localhost:8080/api/v1/";
+    private url= "http://192.168.1.101:8080/api/v1/";
   signIN(username,password){
 
     return this.http.get(this.url+"/users/login/"+username+"/"+password);
