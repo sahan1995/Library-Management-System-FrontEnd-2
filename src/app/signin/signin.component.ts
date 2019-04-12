@@ -27,7 +27,7 @@ private password;
           localStorage.setItem("fulname",result["fullname"]);
           localStorage.setItem("role",result["role"]);
 
-          this.route.navigate(["home"])
+          this.route.navigate(["/home"])
           console.log(result);
       })
   }

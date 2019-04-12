@@ -6,6 +6,8 @@ import {SignupComponent} from "./signup/signup.component";
 import {HomepageComponent} from "./homepage/homepage.component";
 import {ItemsPageModule} from "./items/items.module";
 import {ItemsPage} from "./items/items.page";
+import {BooksComponent} from "./books/books.component";
+import {MagazinesComponent} from "./magazines/magazines.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'signUp', component:SignupComponent},
   { path: 'home', component:HomepageComponent},
   { path: 'items', loadChildren: './items/items.module#ItemsPageModule' },
+  { path: 'books', component:BooksComponent},
+  { path: 'magazines', component:MagazinesComponent},
 ];
 
 @NgModule({
@@ -22,4 +26,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[SigninComponent,SignupComponent,HomepageComponent]
+export const routingComponents=[SigninComponent,SignupComponent,HomepageComponent,BooksComponent,MagazinesComponent]

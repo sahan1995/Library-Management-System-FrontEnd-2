@@ -1,36 +1,57 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Welcome {{fullname}}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--<ion-header>-->
+  <!--<ion-toolbar>-->
+    <!--<ion-title>-->
+      <!--Welcome {{fullname}}-->
+    <!--</ion-title>-->
+  <!--</ion-toolbar>-->
+<!--</ion-header>-->
 
 <ion-router-outlet  id="content" ></ion-router-outlet>
 
 <ion-content padding>
-  <ion-card (click)="openFirst()">
+    <a routerLink="/books">
+  <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-title>Books</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+     <img src="assets/books.jpg">
     </ion-card-content>
   </ion-card>
+    </a>
+    <a routerLink="/magazines">
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-title>Magazine</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        <img src="assets/magazine.jpg">
     </ion-card-content>
   </ion-card>
+    </a>
+    <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>News Papers</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <img src="assets/newspaper.jpg">
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>Articles</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <img src="assets/articles.jpg">
+        </ion-card-content>
+    </ion-card>
 
 </ion-content>
