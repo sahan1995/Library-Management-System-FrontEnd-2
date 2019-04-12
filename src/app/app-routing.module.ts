@@ -4,12 +4,15 @@ import {HomePageModule} from "./home/home.module";
 import {SigninComponent} from "./signin/signin.component";
 import {SignupComponent} from "./signup/signup.component";
 import {HomepageComponent} from "./homepage/homepage.component";
+import {ItemsPageModule} from "./items/items.module";
+import {ItemsPage} from "./items/items.page";
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'index', component:SigninComponent},
   { path: 'signUp', component:SignupComponent},
   { path: 'home', component:HomepageComponent},
+  { path: 'items', loadChildren: './items/items.module#ItemsPageModule' },
 ];
 
 @NgModule({

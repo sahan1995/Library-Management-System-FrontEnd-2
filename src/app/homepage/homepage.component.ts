@@ -18,8 +18,7 @@ export class HomepageComponent implements OnInit {
 
   }
     openFirst() {
-        this.menu.enable(true, 'first');
-        this.menu.open('first');
+     alert("Hello");
     }
 
     openEnd() {
