@@ -1,0 +1,41 @@
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <ion-item>
+          <!--<ion-searchbar expand="block" placeholder="Name, Author, Year, Rare, Public" [(ngModel)]="keyWord" (search)="getItemsbyKeyWord()"></ion-searchbar>-->
+          <ion-input placeholder="Name, Author, Year, Rare, Public"  [(ngModel)]="keyWord" ></ion-input>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-col>
+    <ion-button expand="block" (click)="getItemsbyKeyWord()">Search</ion-button>
+  </ion-col>
+
+  <h3 *ngIf="msg">Sorry, Item Not Found</h3>
+
+  <div  *ngFor="let item of items" >
+    <ion-item routerLink= {{url+item.itemCode}}>
+
+      <ion-thumbnail slot="start">
+        <img src={{item.imgSrc}}>
+      </ion-thumbnail>
+      <ion-label>
+       <b> {{item.itemCategory}}</b><br>
+        Title : <b>{{item.title}}</b><br>
+        Author : <b>{{item.author}}</b><br>
+        Category :<b>{{item.bookCatagory}}</b>
+      </ion-label>
+
+    </ion-item>
+
+
+
+  </div>
+
+</ion-content>

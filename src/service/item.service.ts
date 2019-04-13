@@ -22,4 +22,8 @@ export class ItemService {
     getItems(itemCategort, category) {
         return this.http.get(this.url + "items/findItemCat&Cat/" + itemCategort + "/" + category);
     }
+
+    getItemByID(ID){
+        return this.http.get(this.url+"items/"+ID);
+    }
 }

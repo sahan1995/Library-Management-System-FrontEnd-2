@@ -9,7 +9,7 @@ import { ItemsPage } from './items.page';
 
 const routes: Routes = [
   {
-    path: '/items',
+    path: '',
     component: ItemsPage
   }
 ];

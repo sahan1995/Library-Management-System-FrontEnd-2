@@ -1,38 +1,50 @@
-<!--<ion-header>-->
-  <!--<ion-toolbar>-->
-    <!--<ion-title>-->
-      <!--Welcome {{fullname}}-->
-    <!--</ion-title>-->
-  <!--</ion-toolbar>-->
-<!--</ion-header>-->
+<ion-header>
+<ion-toolbar>
+<ion-title>
+    Welcome {{fullname}}
+</ion-title>
+</ion-toolbar>
+</ion-header>
 
-<ion-router-outlet  id="content" ></ion-router-outlet>
+<ion-router-outlet id="content"></ion-router-outlet>
 
 <ion-content padding>
-    <a routerLink="/books">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Books</ion-card-title>
-    </ion-card-header>
 
-    <ion-card-content>
-     <img src="assets/books.jpg">
-    </ion-card-content>
-  </ion-card>
-    </a>
-    <a routerLink="/magazines">
+    <ion-card routerLink="/allitems">
+        <ion-card-header>
+            <ion-card-title>All Items</ion-card-title>
+        </ion-card-header>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Magazine</ion-card-title>
-    </ion-card-header>
+        <ion-card-content>
+            <img src="assets/library.jpg">
+        </ion-card-content>
+    </ion-card>
 
-    <ion-card-content>
-        <img src="assets/magazine.jpg">
-    </ion-card-content>
-  </ion-card>
-    </a>
-    <ion-card>
+
+
+    <ion-card routerLink="/items/Book">
+        <ion-card-header>
+            <ion-card-title>Books</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <img src="assets/books.jpg">
+        </ion-card-content>
+    </ion-card>
+
+
+    <ion-card routerLink="/items/Magazine">
+        <ion-card-header>
+            <ion-card-title>Magazines</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <img src="assets/magazine.jpg">
+        </ion-card-content>
+    </ion-card>
+
+
+    <ion-card routerLink="/items/News Paper">
         <ion-card-header>
 
             <ion-card-title>News Papers</ion-card-title>
@@ -43,7 +55,8 @@
         </ion-card-content>
     </ion-card>
 
-    <ion-card>
+
+    <ion-card routerLink="/items/Article">
         <ion-card-header>
 
             <ion-card-title>Articles</ion-card-title>
