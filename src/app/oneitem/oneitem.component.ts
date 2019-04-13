@@ -20,6 +20,8 @@ export class OneitemComponent implements OnInit {
   private bookCatagory;
   private price;
   private isbn;
+  private floor;
+  private cupBoard;
   private imgSrc;
   ngOnInit() {
     this.itemCode = this.router.snapshot.params.id;
@@ -43,6 +45,13 @@ export class OneitemComponent implements OnInit {
       this.bookCatagory = result["bookCatagory"]
       this.price = result["price"]
       this.isbn = result["isbn"]
+      this.floor=result["floor"];
+      this.cupBoard=result["cupBoard"];
+
+      if(result["stock"]=="Out of Stock"){
+          this.imgSrc = "assets/outofstock.JPG";
+          return;
+      }
 
         if(this.itemCategory=="Book"){
             this.imgSrc = "assets/books.jpg";

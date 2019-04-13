@@ -18,7 +18,7 @@ export class HomepageComponent implements OnInit {
 
   }
     openFirst() {
-     alert("Hello");
+     // alert("Hello");
     }
 
     openEnd() {
