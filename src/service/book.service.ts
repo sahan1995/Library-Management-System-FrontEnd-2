@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +11,33 @@ export class BookService {
   constructor(private http:HttpClient) { }
 
   getAllItems(itemCategory){
-    return this.http.get(this.url+"items/byItemCategory/"+itemCategory);
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Authorization': 'Basic ' +btoa("library:library123")
+          })
+      };
+    return this.http.get(this.url+"items/byItemCategory/"+itemCategory,httpOptions);
   }
 
   getItemByKeyword(role,category,keyword){
-    return this.http.get(this.url+"items/findByAny/"+role+"/"+category+"/"+keyword);
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Authorization': 'Basic ' +btoa("library:library123")
+          })
+      };
+    return this.http.get(this.url+"items/findByAny/"+role+"/"+category+"/"+keyword,httpOptions);
   }
 
 
   getItems(itemCategort,category){
-    return this.http.get(this.url+"items/findItemCat&Cat/"+itemCategort+"/"+category);
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Authorization': 'Basic ' +btoa("library:library123")
+          })
+      };
+    return this.http.get(this.url+"items/findItemCat&Cat/"+itemCategort+"/"+category,httpOptions);
   }
 }

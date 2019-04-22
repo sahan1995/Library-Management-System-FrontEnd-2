@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +12,22 @@ export class SignupService {
 
 
   saveLocalMemebr(localMemebr){
-    return this.http.post(this.url+"localmemebrs",localMemebr);
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Authorization': 'Basic ' +btoa("library:library123")
+          })
+      };
+    return this.http.post(this.url+"localmemebrs",localMemebr,httpOptions);
   }
 
   saveForeingMemebr(foreignMember){
-    return this.http.post(this.url+"foreignmembers",foreignMember);
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Authorization': 'Basic ' +btoa("library:library123")
+          })
+      };
+    return this.http.post(this.url+"foreignmembers",foreignMember,httpOptions);
 }
 }
